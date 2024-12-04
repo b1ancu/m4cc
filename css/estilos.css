@@ -415,56 +415,109 @@ footer {
     background-color: #D1C4BB; 
     color: #000000; 
     padding: 2rem 0; 
-    text-align: center;
     font-family: "Commissioner", sans-serif;
 }
 
 /* Sección del footer */
 .footer {
     display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en dispositivos móviles */
     justify-content: center;
+    gap: 20px;
+    padding: 0 1rem;
+}
+
+/* Bloques dentro del footer */
+.bloque2,
+.hipervinculos {
+    display: flex; /* Alinear los elementos dentro de cada bloque */
+    gap: 20px;
     align-items: center;
 }
 
-/* Lista en el footer */
+/* Listas dentro del footer */
 footer ul {
     list-style: none;
     display: flex;
-    align-items: center;
-    gap: 20px; 
+    gap: 20px;
+    padding: 0;
+    margin: 0;
 }
 
-/* Estilo general */
+/* Enlaces en el footer */
 footer a {
     text-decoration: none;
     color: #000000; 
     font-size: 1.1rem;
     display: flex;
     align-items: center;
-    gap: 8px; /* Espacio entre el icono y texto */
-    transition: color 0.3s ease; /* Transición  */
+    gap: 8px;
+    transition: color 0.3s ease;
 }
 
-/* Foto en el footer */
+/* Iconos */
 footer img {
     width: 25px;
     height: 25px;
     vertical-align: middle;
 }
 
-/* Efecto para el enlace - Hover */
+/* Hover de enlaces */
 footer a:hover {
-    color: #849785; 
+    color: #849785;
 }
 
 footer a:focus, footer a:hover {
     outline: none;
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
-/*tablet*/
-@media (min-width: 600px)  {
+/* Disposición en dispositivos móviles */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Cambiar disposición a columnas */
+        align-items: center; /* Centrar contenido */
+        padding: 0 2rem;
+    }
+
+    /* Enlaces (bloque2) en móvil */
+    .bloque2 {
+        width: 100%; /* Ocupa todo el ancho */
+        justify-content: center; /* Centrar los enlaces */
+        order: 1; /* Mover los enlaces arriba */
+        text-align: left; /* Alinear los enlaces a la izquierda */
+    }
+
+    /* Íconos (hipervinculos) en móvil */
+    .hipervinculos {
+        width: 100%; /* Ocupa todo el ancho */
+        justify-content: center; /* Centrar los íconos */
+        order: 2; /* Mover los íconos abajo */
+        text-align: right; /* Alinear los íconos a la derecha */
+    }
+
+    footer ul {
+        justify-content: center; /* Centrar los elementos dentro de cada lista */
+    }
 }
-/*desktop*/
-@media (min-width: 1024px) {
+
+/* Disposición en dispositivos de escritorio */
+@media (min-width: 769px) {
+    .footer {
+        flex-direction: row; /* Todo en una fila */
+        align-items: center; /* Alinear los bloques verticalmente */
+        gap: 40px; /* Espaciado uniforme entre los bloques */
+    }
+
+    /* Bloques de enlaces e íconos en escritorio */
+    .bloque2,
+    .hipervinculos {
+        width: auto; /* Los bloques no tienen un ancho fijo */
+        justify-content: flex-start; /* Alinear los elementos al inicio */
+    }
+
+    footer ul {
+        gap: 20px; /* Espaciado uniforme entre los ítems */
+        margin: 0;
+    }
 }
