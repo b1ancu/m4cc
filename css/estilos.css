@@ -1,0 +1,470 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Commissioner:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+.navbar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #D1C4BB; 
+    padding: 10px 20px;
+}
+
+/* Estilos para los enlaces del menú */
+.navbar a {
+    color: #000000; 
+    text-decoration: none;
+    font-size: 16px;
+    padding: 0 10px;
+    font-family: tahoma;
+    transition: color 0.3s ease;
+}
+.navbar a:hover {
+    color: #849785; 
+}
+
+/* Lado Izq del navbar*/
+.left-menu, .right-menu {
+    display: flex;
+    gap: 15px; 
+}
+
+/* Logo */
+.logo-container img {
+    width: 70px;
+    height: auto;
+
+}
+
+/* Index texto central */
+.biactive {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: FFF8F8; /* Fondo de titulo central */
+}
+
+.biactive h1, .biactive h2, .biactive h3, .biactive p {
+    margin: 0.5rem 0;
+}
+
+.biactive h1 {
+    font-family: tahoma;
+    font-size: 5em;
+}
+
+.biactive h2 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-family: tahoma;
+}
+
+.biactive h3 {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-family: tahoma;
+}
+
+.biactive p {
+    font-style: italic;
+    font-family: tahoma;
+}
+
+
+/* Estilosslider */
+.slides {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    justify-content: flex-end;
+    width: 100%; /* Tamano*/
+    margin: 0 auto; /*Lo pone en el medio el slider*/
+    height: 100%; /* Altura del slider */
+}
+
+/* Slider */
+.slide-container {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    min-width: 100%;          
+    height: 100%;             
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo video */
+video {
+    max-width: 100%;   /* Ancho del video */
+    max-height: 100%;  /* Altura */
+        background-color: black; /* Coolor de fondo*/
+}
+
+
+.nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 2; 
+}
+
+.prev, .next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.nav-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2; 
+}
+
+.nav-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+}
+
+.cuerpo {
+    background-color: #e8e8e8;; /* Fondo de cuerpo*/
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem; 
+}
+
+/*nosotros*/
+
+.informacion_personal h1 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-family: tahoma;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.informacion_personal p {
+    font-size: 1rem;
+    font-family: tahoma;
+    padding: 2rem 1rem;
+    background-color: FFF8F8; /* Fondo de titulo central */
+}
+
+.informacion_personal img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-left: 55px;    
+}
+
+/*Banner masa muscular*/
+.mm {
+    padding: 1em;
+    background-image: url("../imagenes/banner_masamuscular.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.mm h1 {
+    font-family: tahoma;
+    font-size: 2em;
+    color:#e8e8e8;
+    text-align: center;
+
+}
+
+/*banner perdida de peso*/
+.pp {
+    padding: 1em;
+    background-image: url("../imagenes/banner_perdidadepeso.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.pp h1 {
+    font-family: tahoma;
+    font-size: 2em;
+    color: #e8e8e8;
+    text-align: center;
+}
+
+/*banner yoga y pilates*/
+.yp {
+    padding: 1em;
+    background-image: url("../imagenes/banner_yoga.jpg");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.yp h1 {
+    font-family: tahoma;
+    font-size: 2em;
+    color: #e8e8e8;
+    text-align: center;
+}
+
+/*banner servicios*/
+.servicios {
+    padding: 1em;
+    background-image: url("../imagenes/banner_servicios.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.servicios h1 {
+    font-family: tahoma;
+    font-size: 2em;
+    color: #e8e8e8;
+    text-align: center;
+}
+
+/*banner info rutinas*/
+.encabezado_uno {
+    padding: 1em;
+    background-image: url("../imagenes/banner_inforutinas.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.encabezado_uno h1 {
+    font-family: tahoma;
+    font-size: 2em;
+    color: #e8e8e8;
+    text-align: center;
+}
+
+/*texto info rutinas*/
+.botones {
+    font-family: tahoma;
+    font-size: 1em;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    gap: 8px;
+}
+
+.my-button {
+    padding: 10px 20px;
+    background-color: #849785;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .my-button:hover {
+    background-color: #708070;
+  }
+  
+  .my-button:active {
+    background-color: #849785;
+  }
+
+  .informativo_inforutinas p {
+    font-size: 1rem;
+    font-family: tahoma;
+    padding: 2rem 1rem;
+  }
+  
+  .informativo_inforutinas h2 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-family: tahoma;
+    margin: 0.5em;
+  }
+
+
+/* testimonios */
+.testimonios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #e8e8e8;
+    text-align: center;
+}
+
+.testimonios figure {
+    margin: 0 auto;
+}
+
+.testimonios img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto testimonio */
+.testimonios img:hover {
+    transform: scale(1.05); 
+}
+
+.testimonios h3, .testimonios h4 {
+    margin: 0.5rem 0;
+    color: #1a1a1a; /* Color nombre */
+    font-family: tahoma;
+}
+
+.testimonios article {
+    background-color: #fff; /* tarjetas de los testimonios */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Una sombrita */
+}
+
+.testimonios article h3 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: tahoma;
+}
+
+.testimonios article h4 {
+    font-style: italic;
+    font-family: "Commissioner", sans-serif;
+    color: #1a1a1a; /* Color para las comillas */
+
+}
+
+/*informacion*/
+.informacion {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #e8e8e8;
+    text-align: center;
+}
+
+.informacion figure {
+    margin: 0 auto;
+}
+
+.informacion img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto informacion */
+.informacion img:hover {
+    transform: scale(1.05); 
+}
+
+.informacion h3, .informacion h4 {
+    margin: 0.5rem 0;
+    color: #1a1a1a; /* Color nombre */
+    font-family: tahoma;
+}
+
+.informacion article {
+    background-color: #fff; /* tarjetas de los testimonios */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Una sombrita */
+}
+
+.informacion article h3 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: tahoma;
+}
+
+.informacion article h4 {
+    font-style: italic;
+    font-family: "Commissioner", sans-serif;
+    color: #1a1a1a; /* Color para las comillas */
+}
+
+/* Estilos generales del footer */
+footer {
+    background-color: #D1C4BB; 
+    color: #000000; 
+    padding: 2rem 0; 
+    text-align: center;
+    font-family: "Commissioner", sans-serif;
+}
+
+/* Sección del footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Lista en el footer */
+footer ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+/* Estilo general */
+footer a {
+    text-decoration: none;
+    color: #000000; 
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre el icono y texto */
+    transition: color 0.3s ease; /* Transición  */
+}
+
+/* Foto en el footer */
+footer img {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+/* Efecto para el enlace - Hover */
+footer a:hover {
+    color: #849785; 
+}
+
+footer a:focus, footer a:hover {
+    outline: none;
+    text-decoration: underline; 
+}
+
+/*tablet*/
+@media (min-width: 600px)  {
+}
+/*desktop*/
+@media (min-width: 1024px) {
+}
