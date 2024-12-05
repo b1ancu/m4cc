@@ -167,27 +167,45 @@ video {
 
 /*nosotros*/
 
+/* Contenedor principal */
+.informacion_personal {
+    display: flex;
+    flex-direction: column; /* Por defecto en columna para dispositivos móviles */
+    align-items: center; /* Centrar elementos */
+    gap: 1rem; /* Espaciado entre los elementos */
+    padding: 1rem;
+    text-align: center; /* Centrar texto */
+    background-image: url(../imagenes/multiple.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Estilos para el H1 */
 .informacion_personal h1 {
     font-size: 1.5rem;
     letter-spacing: 2px;
-    font-family: tahoma;
-    text-align: center;
+    font-family: Tahoma, sans-serif;
     margin-top: 1em;
+    text-align: center; /* Siempre centrado */
 }
 
+/* Estilos para el párrafo */
 .informacion_personal p {
     font-size: 1rem;
-    font-family: tahoma;
+    font-family: Tahoma, sans-serif;
     padding: 2rem 1rem;
-    background-color: FFF8F8; /* Fondo de titulo central */
+    background-color: #FFF8F8; /* Fondo para destacar el texto */
+    border-radius: 10px; /* Bordes redondeados */
 }
 
+/* Imagen dentro del contenedor */
 .informacion_personal img {
-    width: 100%;
-    max-width: 300px;
+    width: 100%; /* Imagen responsiva */
+    max-width: 300px; /* Tamaño máximo */
     border-radius: 10px;
-    margin-left: 55px;    
 }
+
 
 /*Banner masa muscular*/
 .mm {
@@ -267,13 +285,20 @@ video {
 
 /*texto info rutinas*/
 .botones {
+    display: flex;
+    flex-direction: column; /* Por defecto, los botones estarán en columna */
+    align-items: center;
+    justify-content: center;
     font-family: tahoma;
+    font-style: bold;
     font-size: 1em;
     color: #000000;
     text-align: center;
     margin-bottom: 2em;
     margin-top: 2em;
     gap: 8px;
+    padding: 0; /* Evita margenes extras del <ul> */
+    list-style: none; /* Remueve los estilos por defecto de lista */
 }
 
 .my-button {
@@ -283,15 +308,17 @@ video {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .my-button:hover {
+    text-decoration: none; /* Remueve subrayado del enlace */
+    display: block; /* Asegura que el botón ocupe todo el ancho de su contenedor */
+}
+
+.my-button:hover {
     background-color: #708070;
-  }
-  
-  .my-button:active {
+}
+
+.my-button:active {
     background-color: #849785;
-  }
+}
 
   .informativo_inforutinas p {
     font-size: 1rem;
@@ -412,17 +439,17 @@ video {
 
 /* Estilos generales del footer */
 footer {
-    background-color: #D1C4BB; 
-    color: #000000; 
-    padding: 2rem 0; 
+    background-color: #D1C4BB;
+    color: #000000;
+    padding: 2rem 0;
     font-family: "Commissioner", sans-serif;
 }
 
-/* Sección del footer */
+/* Contenedor principal del footer */
 .footer {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en dispositivos móviles */
-    justify-content: center;
+    flex-direction: column; /* Por defecto en columnas */
+    align-items: center;
     gap: 20px;
     padding: 0 1rem;
 }
@@ -430,94 +457,96 @@ footer {
 /* Bloques dentro del footer */
 .bloque2,
 .hipervinculos {
-    display: flex; /* Alinear los elementos dentro de cada bloque */
-    gap: 20px;
-    align-items: center;
+    display: flex;
+    flex-direction: column; /* Elementos apilados */
+    align-items: center; /* Centrar contenido */
+    width: 100%; /* Ocupa todo el ancho */
 }
 
-/* Listas dentro del footer */
-footer ul {
+/* Listas dentro de cada bloque */
+.bloque2 ul,
+.hipervinculos ul {
     list-style: none;
-    display: flex;
-    gap: 20px;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column; /* Elementos en columna */
+    gap: 10px;
+    align-items: center; /* Centrar contenido dentro de las listas */
 }
 
-/* Enlaces en el footer */
+/* Enlaces */
 footer a {
     text-decoration: none;
-    color: #000000; 
+    color: #000000;
     font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
     transition: color 0.3s ease;
 }
 
-/* Iconos */
+/* Hover de enlaces */
+footer a:hover {
+    color: #849785;
+    text-decoration: underline;
+}
+
+/* Íconos */
 footer img {
     width: 25px;
     height: 25px;
     vertical-align: middle;
 }
 
-/* Hover de enlaces */
-footer a:hover {
-    color: #849785;
-}
-
-footer a:focus, footer a:hover {
-    outline: none;
-    text-decoration: underline;
-}
-
-/* Disposición en dispositivos móviles */
-@media (max-width: 768px) {
-    .footer {
-        flex-direction: column; /* Cambiar disposición a columnas */
-        align-items: center; /* Centrar contenido */
-        padding: 0 2rem;
-    }
-
-    /* Enlaces (bloque2) en móvil */
-    .bloque2 {
-        width: 100%; /* Ocupa todo el ancho */
-        justify-content: center; /* Centrar los enlaces */
-        order: 1; /* Mover los enlaces arriba */
-        text-align: left; /* Alinear los enlaces a la izquierda */
-    }
-
-    /* Íconos (hipervinculos) en móvil */
-    .hipervinculos {
-        width: 100%; /* Ocupa todo el ancho */
-        justify-content: center; /* Centrar los íconos */
-        order: 2; /* Mover los íconos abajo */
-        text-align: right; /* Alinear los íconos a la derecha */
-    }
-
-    footer ul {
-        justify-content: center; /* Centrar los elementos dentro de cada lista */
-    }
-}
-
-/* Disposición en dispositivos de escritorio */
+/* Ajustes para pantallas más grandes */
 @media (min-width: 769px) {
     .footer {
         flex-direction: row; /* Todo en una fila */
-        align-items: center; /* Alinear los bloques verticalmente */
-        gap: 40px; /* Espaciado uniforme entre los bloques */
+        justify-content: space-between; /* Separar bloques horizontalmente */
+        align-items: center;
+        margin: 2em;
     }
 
-    /* Bloques de enlaces e íconos en escritorio */
     .bloque2,
     .hipervinculos {
-        width: auto; /* Los bloques no tienen un ancho fijo */
-        justify-content: flex-start; /* Alinear los elementos al inicio */
+        flex-direction: row; /* Disponer elementos en fila */
+        align-items: center; /* Alinear verticalmente */
+        width: auto; /* Ajustar al contenido */
     }
 
-    footer ul {
-        gap: 20px; /* Espaciado uniforme entre los ítems */
-        margin: 0;
+    .bloque2 ul,
+    .hipervinculos ul {
+        flex-direction: row; /* Elementos en fila */
+        gap: 20px; /* Espaciado uniforme */
+    }
+
+    .botones {
+        flex-direction: row; /* Cambia a disposición horizontal en info rutinas*/
+    }
+
+    .informacion_personal {
+        align-items: center; /* Mantiene centrado el contenedor general */
+    }
+
+    .informacion_personal h1 {
+        margin-bottom: 2rem; /* Separación clara entre el h1 y los demás elementos */
+    }
+
+    /* Contenedor para el texto y la imagen */
+    .informacion_personal > div {
+        display: flex;
+        flex-direction: row; /* Colocar texto e imagen en línea */
+        justify-content: center; /* Centrar horizontalmente */
+        align-items: center; /* Alinear verticalmente */
+        gap: 2rem; /* Espaciado entre texto e imagen */
+        text-align: left; /* Alinear texto a la izquierda */
+    }
+
+    .informacion_personal p {
+        flex: 1; /* Permitir que el texto ocupe el espacio necesario */
+    }
+
+    .informacion_personal img {
+        flex-shrink: 0; /* Evitar que la imagen se reduzca demasiado */
     }
 }
+
+    
